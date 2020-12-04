@@ -37,5 +37,13 @@
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^2.5.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "core-js": "^3.8.0",
+    "vue-router": "^3.4.9"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }
