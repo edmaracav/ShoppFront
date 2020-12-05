@@ -1,5 +1,8 @@
 const { VueLoaderPlugin } = require("vue-loader");
 const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const autoprefixer = require("autoprefixer");
+
 
 module.exports = {
   entry: {
@@ -36,10 +39,26 @@ module.exports = {
           esModule: false,
         },
       },
+      {
+        test: /\.s?css$/,
+        use: [
+          "style-loader",
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              plugins: () => [autoprefixer()],
+            },
+          },
+          "sass-loader",
+        ],
+      },
     ],
   },
   plugins: [
     new VueLoaderPlugin(),
+    new MiniCssExtractPlugin()
   ],
   resolve: {
     alias: {
