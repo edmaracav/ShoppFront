@@ -21,6 +21,21 @@ module.exports = {
         test: /\.vue$/,
         loader: "vue-loader",
       },
+      {
+        test: /\.(eot|ttf|woff|woff2)(\?\S*)?$/,
+        loader: "file-loader",
+        options: {
+          name: "[name][contenthash:8].[ext]",
+        },
+      },
+      {
+        test: /\.(png|jpe?g|gif|webm|mp4|svg)$/,
+        loader: "file-loader",
+        options: {
+          outputPath: "assets",
+          esModule: false,
+        },
+      },
     ],
   },
   plugins: [
