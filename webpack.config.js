@@ -7,7 +7,7 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    main: "./src/main.js",
+    main: "./src/main.ts",
   },
   output: {
     filename: "[name].[contenthash:8].js",
@@ -16,6 +16,14 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.ts$/,
+        exclude: /node_modules|vue\/src/,
+        loader: "ts-loader",
+        options: {
+          appendTsSuffixTo: [/\.vue$/]
+        }
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -73,7 +81,7 @@ module.exports = {
     alias: {
       vue$: "vue/dist/vue.runtime.esm.js",
     },
-    extensions: ["*", ".js", ".vue", ".json"],
+    extensions: [".ts", "*", ".js", ".vue", ".json"],
   },
   optimization: {
     moduleIds: "hashed",

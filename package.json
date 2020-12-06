@@ -19,14 +19,14 @@
   },
   "homepage": "https://github.com/edmaracav/ShoppFront#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "core-js": "^3.6.5",
     "vue": "^2.6.12",
-    "vue-router": "^3.4.3",
     "vue-class-component": "^7.2.2",
     "vue-property-decorator": "^8.3.0",
+    "vue-router": "^3.4.3",
     "vuex": "^3.1.2",
-    "vuex-class": "^0.3.2",
-    "axios": "^0.19.2"
+    "vuex-class": "^0.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
@@ -43,6 +43,8 @@
     "sass": "^1.26.10",
     "sass-loader": "^10.0.2",
     "style-loader": "^1.2.1",
+    "ts-loader": "^8.0.11",
+    "typescript": "^4.1.2",
     "vue-loader": "^15.9.3",
     "vue-template-compiler": "^2.6.12",
     "webpack": "^4.44.1",
