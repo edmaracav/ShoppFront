@@ -5,10 +5,10 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 
 import { Component, Vue } from "vue-property-decorator";
-import { Getter, Setter } from "vuex-class";
+import { Getter } from "vuex-class";
 
 class Cart extends Vue {
 
