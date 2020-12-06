@@ -1,4 +1,4 @@
-import Skus from './Sku'
+import Skus from './SkuModel'
 
 export default interface Product {
     id: string | null;

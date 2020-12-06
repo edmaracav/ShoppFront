@@ -1,4 +1,4 @@
-import Product from './Product';
+import Product from './ProductModel';
 
 export default interface Cart {
     id: string | null;
