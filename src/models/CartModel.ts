@@ -1,8 +1,8 @@
-import Product from './ProductModel';
+import Product from './Product';
 
 export default interface Cart {
-    id: string | null;
-    products: Product[];
-    cartTotalPrice: number;
-    cartTotalProducts: number;
+    Id: string | null;
+    Products: Product[] | null;
+    CartTotalPrice: number | null;
+    ProductsCount: number | null;
 }
